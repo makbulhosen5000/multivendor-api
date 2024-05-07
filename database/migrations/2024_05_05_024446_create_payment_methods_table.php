@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->comment("COD,Paypal, Stripe");
             $table->string('slug')->unique();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

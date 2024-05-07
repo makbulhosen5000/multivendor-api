@@ -32,6 +32,7 @@ return new class extends Migration
             $table->string('tracking_url')->nullable();
             $table->string('shipping_carrier')->nullable()->comment("Shipping company name");
             
+            $table->unsignedBigInteger('parent_order_id')->nullable()->comment("if there is a parent order id");
             $table->unsignedBigInteger('shop_id')->nullable()->comment("if there is a parent order id");
             $table->timestamps();
         });

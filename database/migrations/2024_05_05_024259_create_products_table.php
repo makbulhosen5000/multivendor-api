@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->string('description')->nullable(); 
+            $table->text('description')->nullable(); 
             $table->unsignedDecimal('price',8,2)->default(0); 
             $table->unsignedDecimal('sale_price',8,2)->nullable(); 
             $table->unsignedInteger('quantity',8,2)->default(0); 

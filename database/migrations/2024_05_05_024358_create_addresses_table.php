@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->boolean('is_billing')->default(false);
             $table->boolean('is_shipping')->default(false);
-            $table->boolean('is_shipping')->default(false);
             $table->string('type')->default('home');
             $table->timestamps();
         });
