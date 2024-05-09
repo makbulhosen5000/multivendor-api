@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -22,7 +21,7 @@ return new class extends Migration
             $table->unsignedInteger('tax')->default(0);
             $table->unsignedInteger('shipping')->default(0);
             $table->unsignedInteger('grand_total')->default(0);
-            $table->unsignedInteger('shop_id')->default(0);
+            $table->unsignedInteger('shop_id')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order_items');
+        Schema::dropIfExists('line_items');
     }
 };

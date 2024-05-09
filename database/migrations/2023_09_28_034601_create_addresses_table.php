@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -19,10 +18,11 @@ return new class extends Migration
             $table->string('address');
             $table->string('city')->nullable();
             $table->unsignedBigInteger('state_id')->nullable();
-            $table->unsignedBigInteger('county_id')->nullable();
+            $table->unsignedBigInteger('country_id')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
+            $table->boolean('is_default')->default(false);
             $table->boolean('is_billing')->default(false);
             $table->boolean('is_shipping')->default(false);
             $table->string('type')->default('home');
