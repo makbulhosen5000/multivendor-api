@@ -1,0 +1,16 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "multivendor API",
+        "description": "multivendor API info",
+        "contact": {
+            "name": "Swagger API Team"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/v1": {
+            "description": "Example path"
+        }
+    }
+}
