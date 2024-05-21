@@ -8,7 +8,7 @@ class TestController extends Controller
 {
      /**
      * @OA\Get(
-     *    path="/api/test",
+     *    path="/api/v1/test",
      *     tags={"Ping"},
      *     summary="Ping API",
      *     description="Ping API",
